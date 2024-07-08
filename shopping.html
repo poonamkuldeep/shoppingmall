@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Page with Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            margin: auto;
+            margin-top: 20vh;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .login-container a {
+            display: block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            margin: 20px 0;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product {
+            background-color: white;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(25% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .product h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .product button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Login Form -->
+    <div id="loginForm" class="login-container">
+        <h2>Login</h2>
+        <form onsubmit="event.preventDefault(); showShoppingPage();">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <a href="#">Forgot your password?</a>
+    </div>
+
+    <!-- Shopping Page -->
+    <div id="shoppingPage" class="container hidden">
+        <header>
+            <h1>Shopping Page</h1>
+        </header>
+
+        <!-- Women's Section -->
+        <section>
+            <h2 class="section-title">Women's Dresses</h2>
+            <div class="products">
+                <div class="product">
+                    <a href="https://www.google.com/search?client=ubuntu-sn&hs=JI0&sca_esv=cd8754e195853826&sca_upv=1&channel=fs&q=floral+women+dress&tbm=shop&source=lnms&fbs=AEQNm0COtQ6qE5snXClm_cWqGTLX_jMP5V4l2v9LemFtanifXXTKrMMqmKUWXEqMOTvUWjh32YiMrtRaydvvlf4xc59VozWZ1FcQ32Op83AMai-VD8_3g1l4-18Kl2RDkBGhvVyNTvJTBTukmWsgGfosjjmVxXD4WeoD5LDhEcSB9qPLLsi6UNro0E7qf2M0zZHmC70yVxKEkBKlZNesxzWmip2Tl3ErDA&ved=1t:200715&ictx=111&biw=1541&bih=806&dpr=1.2" target="_blank">
+                        <img src="https://www.berrylush.com/cdn/shop/products/1_b4d038f7-c37d-4ad1-81ed-2c301c5b96f3_1445x.jpg?v=1649405562" alt="Floral Dress">
+                    </a>
+                    <h3>Floral Dress</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <a href="https://www.koskii.com/collections/evening-gowns" target="_blank">
+                        <img src="https://st3.depositphotos.com/7980778/12650/i/450/depositphotos_126500096-stock-photo-woman-in-blue-evening-dress.jpg" alt="Evening Gown">
+                    </a>
+                    <h3>Evening Gown</h3>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Women's Shoes</h2>
+            <div class="products">
+                <div class="product">
+                    <a href="https://www.myntra.com/heels" target="_blank">
+                        <img src="https://images.jdmagicbox.com/quickquotes/images_main/01-women-heel-sandals-2182553227-sb3j5f27.jpg" alt="Heels">
+                    </a>
+                    <h3>Heels</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <a href="https://www.ajio.com/find/womens-sneakers" target="_blank">
+                        <img src="https://m.media-amazon.com/images/I/71cvtoQ9njL._AC_SL1500_.jpg" alt="Sneakers">
+                    </a>
+                    <h3>Sneakers</h3>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Women's Accessories</h2>
+            <div class="products">
+                <div class="product">
+                    <a href="https://www.ajio.com/women-handbags/c/830301004" target="_blank">
+                        <img src="https://5.imimg.com/data5/ANDROID/Default/2023/5/312045711/SW/ZD/FK/190408770/product-jpeg-500x500.jpg" alt="Handbag">
+                    </a>
+                    <h3>Handbag</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <a href="https://www.myntra.com/women-scarves" target="_blank">
+                        <img src="https://m.media-amazon.com/images/I/61mprHzWWkL._AC_UY1100_.jpg" alt="Scarf">
+                    </a>
+                    <h3>Scarf</h3>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Women Traditional Wear</h2>
+            <div class="products">
+                <div class="product">
+                    <a href="https://in.pinterest.com/shonalirwt30/suit-and-saree/" target="_blank">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrSZ608cU0I5G6kt4Zp2Lcle6FLloxG_belw&s" alt="suits">
+                    <h3>Saree and Suits</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <a href="https://www.samyakk.com/lehenga" target="_blank">
+                    <img src="https://media.samyakk.com/pub/media/catalog/category/lehenga1.jpg" alt="lehenga">
+                    <h3>LEHENGA</h3>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Men's Section -->
+        <section>
+            <h2 class="section-title">Men's Clothing</h2>
+            <div class="products">
+                <div class="product">
+                    <a href="https://www.ajio.com/men-tshirts/c/830216014" target="_blank">
+                        <img src="https://images.meesho.com/images/products/374206265/6zazs_512.webp" alt="T-Shirt">
+                    </a>
+                    <h3>T-Shirt</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <a href="https://www.myntra.com/men-jeans" target="_blank">
+                        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTJkQ3zA6o5an-erOG4du9wnqHs8VYTlJIstt2-MuMWpQ2gwPGD-kQN_Y3f5rx-6lmRx9cWBe7n947Ot3tTXTxBn-34ZvKjEQ" alt="Jeans">
+                    </a>
+                    <h3>Jeans</h3>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Men's Shoes</h2>
+            <div class="products">
+                <div class="product">
+                    <a href="https://www.amazon.in/Men-Loafers-Moccasins-Shoes/b?ie=UTF8&node=1983573031" target="_blank">
+                        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSyreS8D_eVnRwVq6-3dEteS71HEwpCsv1glpkPiIx3MeyorB0H00WqcwAIwk8JLXyN1FcsDc7Nv2RVc1PK84_8EW36pOo9M6lvG7NRedbKOXsHYf34Ullm&usqp=CAc" alt="Loafers">
+                    </a>
+                    <h3>Loafers</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <a href="https://www.ajio.com/men-sneakers/c/830207010" target="_blank">
+                        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRzJe72sHsIWHFo37Rx6Cc4XhGpm9k21Z_oq7Ek3WYzZEA0Gib4P5o23GXz_WE9CKv6gDA6zzsGzJ6cXS_5cdlsCdlkWQ-GsTMAXgQfgkNZ" alt="Sneakers">
+                    </a>
+                    <h3>Sneakers</h3>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Men's Accessories</h2>
+            <div class="products">
+                <div class="product">
+                    <a href="https://www.titan.co.in/shop/watches-for-men" target="_blank">
+                    <img src="https://images-cdn.ubuy.co.in/6538521dd843ca37ef23780f-oupinke-mens-watches-automatic-skeleton.jpg" alt="Watch">
+                    <h3>Watch</h3>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <a href="https://www.ajio.com/men-wallets/c/830201008" target="_blank">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRKGiLZ8tJWFrArCA58qNe-jfbGprKPzEmcLK1ymJnSBhBnS4SwhaGpm-tEAgvP8X5gsLEDR9f3HRPMzEv8w1WNBASXIygAh2gRtCRpkNuAff_z8UMhyhVREkAVrzhpCX-NsIb8ousC1A&usqp=CAc" alt="Wallet">
+                    <h3>Wallet</h3>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function showShoppingPage() {
+            document.getElementById('loginForm').classList.add('hidden');
+            document.getElementById('shoppingPage').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
